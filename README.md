@@ -15,7 +15,7 @@ Resources
 ---------
 
 -   [Resources in this repository, that we will update !](https://github.com/fmi-lab/up-2017-inf-group4/tree/master/Resources)
--   [Repository with hws/exercies/exams](https://github.com/fmi-lab/up-group5)
+-   [Repository with hws/exercises/exams](https://github.com/fmi-lab/up-group5)
 -   [Isocpp](https://isocpp.org/)
 -   [Cppreference](http://en.cppreference.com/w/)
 -   [CppCon](https://www.youtube.com/user/CppCon)
