@@ -14,12 +14,14 @@ Introduction to Programming
 Resources
 ---------
 
--   [CS Teaching Material Archive](https://www.cs.bu.edu/teaching/)
--   [Notes C++](http://www.fredosaurus.com/notes-cpp/)
--   [Open My Mind (Algorithms)](http://algorithms.openmymind.net)
--   [Sorting Algorithms](http://sorting-algorithms.com/)
+-   [Resources in this repository, that we will update !](https://github.com/fmi-lab/up-2017-inf-group4/tree/master/Resources)
+-   [Repository with hws/exercies/exams](https://github.com/fmi-lab/up-group5)
+-   [Isocpp](https://isocpp.org/)
+-   [Cppreference](http://en.cppreference.com/w/)
+-   [CppCon](https://www.youtube.com/user/CppCon)
+-   [LearnCpp](http://www.learncpp.com/)
+-   [Cplusplus](http://www.cplusplus.com/)
+-   [Recommended Books](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 -   [VisuAlgo](http://visualgo.net/)
+-   [Compiler Explorer](https://godbolt.org/)
 
-### Online courses
-
--   [Youtube C++ Course](https://www.youtube.com/watch?v=l8UeoizDLJw&list=PL71DAFD8C68FD9013&index=1)
