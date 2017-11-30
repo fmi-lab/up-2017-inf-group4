@@ -24,4 +24,14 @@ Resources
 -   [Recommended Books](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 -   [VisuAlgo](http://visualgo.net/)
 -   [Compiler Explorer](https://godbolt.org/)
-
+-   topcoder.com
+-   codeforces.com
+-   train.usaco.org/usacodate
+-   acm.timus.ru
+-   uva.onlinejudge.org
+-   codeit.bg
+-   projecteuler.net
+-   hackerrank.com
+-   code.google.com/codejam
+-   facebook.com/hackercup
+-   informatika.bg
