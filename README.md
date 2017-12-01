@@ -35,3 +35,4 @@ Resources
 -   code.google.com/codejam
 -   facebook.com/hackercup
 -   informatika.bg
+-   http://paulbourke.net/geometry/reflected/ - !!!
