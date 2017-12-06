@@ -22,7 +22,9 @@ void read_array(double arr[], unsigned n)
 
 void print(double arr[], unsigned n)
 {
+	//–æ—Ç–ø–µ—á–∞—Ç–≤–∞ —Å–∞–º–æ 3 –∑–Ω–∞–∫–∞ —Å–ª–µ–¥ –¥–µ—Å–µ—Ç–∏—á–∫–∞—Ç–∞ –∑–∞–ø–µ—Ç–∞—è
 	std::cout << std::fixed << std::setprecision(3);
+
 	for(unsigned i = 0; i < n; ++i)
 		std::cout << arr[i] << " ";
 	std::cout << std::endl;
@@ -83,21 +85,21 @@ void problem1()
 		read_array(b, 3);
 	}while(is_zero(b[0]) && is_zero(b[1]));
 
-	
-	if(is_zero(a[0] * b[1] - a[1] * b[0]))
+	double A = calc_det(a[0], a[1], b[0], b[1]);
+
+	if(is_zero(A))
 	{
-		if (is_zero(a[0] * b[2] - a[2] * b[0]))
+		if (is_zero(calc_det(a[1], a[2], b[1], b[2])))
 			std::cout << "coincide" << std::endl;
 		else
 			std::cout << "parallel" << std::endl;
 	}
 	else
 	{
-		double c = calc_det(a[0], a[1], b[0], b[1]);
-		double d = calc_det(a[1], a[2], b[1], b[2]);
-		double e = calc_det(a[2], a[0], b[2], b[0]);
-		double x = d / c;
-		double y = e / c;
+		double B = calc_det(a[1], a[2], b[1], b[2]);
+		double C = calc_det(a[2], a[0], b[2], b[0]);
+		double x = B / A;
+		double y = C / A;
 
 		std::cout << std::fixed << std::setprecision(3);
 		std::cout << x << " " << y << std::endl;
@@ -143,9 +145,9 @@ void right_to_left(unsigned number, unsigned pos, unsigned digit)
 
 void left_to_right(unsigned number, unsigned pos, unsigned digit)
 {
-	//ËÁ‡Áˇ‚‡Ï(Ú‡ÌÒÙÓÏË‡Ï) ÔÓÁËˆËˇÚ‡
-	//ÔÓ„ÎÂ‰Ì‡Ú‡ ÓÚÎˇ‚Ó Ì‡‰ˇÒÌÓ
-	//Á‡ ‰‡ ËÁÔÓÁÎ‚‡Ï ÔÂ‰ÌÓÚÓ Â¯ÂÌËÂ
+	//–∏–∑—Ä–∞–∑—è–≤–∞–º(—Ç—Ä–∞–Ω—Å—Ñ–æ—Ä–º–∏—Ä–∞–º) –ø–æ–∑–∏—Ü–∏—è—Ç–∞
+	//–ø–æ–≥–ª–µ–¥–Ω–∞—Ç–∞ –æ—Ç–ª—è–≤–æ –Ω–∞–¥—è—Å–Ω–æ
+	//–∑–∞ –¥–∞ –∏–∑–ø–æ–∑–ª–≤–∞–º –ø—Ä–µ–¥–Ω–æ—Ç–æ —Ä–µ—à–µ–Ω–∏–µ
 	unsigned digs = cnt_digits(number);
 	pos = digs - pos + 1;
 	
@@ -189,8 +191,8 @@ void problem3()
 	double average = sum_array(arr, n) / n;
 	
 	unsigned cnt = 1;
-	unsigned read = 1;  // ËÌ‰ÂÍÒ Á‡ ˜ÂÚÂÌÂ ‚ Ï‡ÒË‚‡
-	unsigned write = 1; // ËÌ‰ÂÍÒ Á‡ Á‡ÔËÒ ‚ Ï‡ÒË‚‡
+	unsigned read = 1;  // –∏–Ω–¥–µ–∫—Å –∑–∞ —á–µ—Ç–µ–Ω–µ –≤ –º–∞—Å–∏–≤–∞
+	unsigned write = 1; // –∏–Ω–¥–µ–∫—Å –∑–∞ –∑–∞–ø–∏—Å –≤ –º–∞—Å–∏–≤–∞
 	
 	while(read < n)
 	{
@@ -290,10 +292,10 @@ void problem4a()
 	}
 
 	if (two_equal_rows == false)
-		std::cout << "ìNo such rows" << std::endl;
+		std::cout << "‚ÄúNo such rows" << std::endl;
 }
 
-//» ‚ ‰‚ÂÚÂ Â¯ÂÌËˇ Ì‡ 4· ÒË ˜ÛÔˇ(ÔÓÏÂÌˇÏ) ‚ıÓ‰ÌËÚÂ ‰‡ÌÌË, ÍÓÂÚÓ Â ÎÓ¯‡ Ô‡ÍÚËÍ‡
+//–ò –≤ –¥–≤–µ—Ç–µ —Ä–µ—à–µ–Ω–∏—è –Ω–∞ 4–± —Å–∏ —á—É–ø—è(–ø—Ä–æ–º–µ–Ω—è–º) –≤—Ö–æ–¥–Ω–∏—Ç–µ –¥–∞–Ω–Ω–∏, –∫–æ–µ—Ç–æ –µ –ª–æ—à–∞ –ø—Ä–∞–∫—Ç–∏–∫–∞
 void problem4b_1()
 {
 	double mat[MATRIX_SIZE][MATRIX_SIZE];
@@ -348,8 +350,8 @@ void problem4b_2()
 					{
 						match = true;
 						swap(mat[r2][pos1], mat[r2][pos2]);
-						//„‡‡ÌÚË‡ÏÂ ÒË, ˜Â ÒÎÂ‰ ÔÓÁËˆËˇ "pos1" ‚ Â‰ "r2"
-						//ËÏ‡ÏÂ Ò‡ÏÓ "ÌÂÓ·‡·ÓÚÂÌË" ÂÎÂÏÂÌÚË
+						//–≥–∞—Ä–∞–Ω—Ç–∏—Ä–∞–º–µ —Å–∏, —á–µ —Å–ª–µ–¥ –ø–æ–∑–∏—Ü–∏—è "pos1" –≤ —Ä–µ–¥ "r2"
+						//–∏–º–∞–º–µ —Å–∞–º–æ "–Ω–µ–æ–±—Ä–∞–±–æ—Ç–µ–Ω–∏" –µ–ª–µ–º–µ–Ω—Ç–∏
 					}
 				}
 			}
@@ -368,5 +370,6 @@ void problem4b_2()
 
 int main()
 {
+	problem1();
 	return 0;
 }
